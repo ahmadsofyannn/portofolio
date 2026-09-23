@@ -1,0 +1,162 @@
+/* =========================================================
+   4. HERO SECTION
+   ========================================================= */
+.hero {
+  padding-top: 70px;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  min-height: 85vh;
+}
+
+/* Greeting & Titles */
+.hero__greet {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.hero__title span {
+  color: var(--accent-color);
+  text-shadow: 0 0 14px var(--accent-glow);
+}
+
+.hero__role {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+.hero__rule {
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-glow);
+  margin-bottom: 22px;
+}
+
+.hero__desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 52ch;
+  margin-bottom: 32px;
+  text-align: justify;
+}
+
+/* Social Media Icons */
+.hero__social {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-block: 20px;
+  font-weight: 600;
+}
+
+.social-row {
+  display: flex;
+  gap: 14px;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.social-circle:hover {
+  background: var(--accent-color);
+  color: #0b0f17;
+  box-shadow: 0 0 16px var(--accent-glow);
+  transform: translateY(-3px);
+}
+
+/* ---------------------------------------------------------
+   Hero Visual & Blob Frame
+   --------------------------------------------------------- */
+.hero__visual {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-self: end;
+  max-width: 380px;      /* Lebar bingkai persegi panjang */
+  height: 480px;         /* Tinggi bingkai persegi panjang */
+  border-radius: 20px;   /* Sudut luar persegi panjang rapi */
+  overflow: hidden;     /* Memotong efek agar pas di dalam bingkai */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  align-items: flex-end; /* Memastikan foto rapat di bagian bawah */
+  justify-content: center;
+}
+
+.hero__frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 135%;
+  height: 135%;
+  background: #ffffff; /* Warna Garis Putih */
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Glow putih halus */
+  
+  /* Animasi cairan bergerak */
+  animation: liquidMorph 8s ease-in-out infinite alternate;
+}
+
+.hero__frame::after {
+  content: '';
+  position: absolute;
+  top: 6px;    /* Ketebalan garis putih (6px) */
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: var(--accent-color); /* Warna Cyan Utama */
+  border-radius: inherit;          /* Mengikuti bentuk meliuk dari induknya */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero__photo {
+  position: relative;
+  z-index: 2; /* Berada di paling atas */
+  max-height: 440px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+/* Animasi Morphing Blob */
+@keyframes liquidMorph {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+    transform: translate(-48%, -52%) rotate(180deg) scale(1.05);
+  }
+  100% {
+    border-radius: 30% 70% 40% 60% / 60% 30% 70% 40%;
+    transform: translate(-52%, -48%) rotate(360deg) scale(1);
+  }
+}

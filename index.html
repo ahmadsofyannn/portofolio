@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Sofyan — Portofolio</title>
+  
+  <!-- Font Google (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- CSS Utama -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ================= NAV BAR ================= -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="logo">
+        AHMAD<span class="logo-accent">SOFYAN</span>
+      </a>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav__list">
+          <li><a href="#hero" class="nav__link is-active">Beranda</a></li>
+          <li><a href="#offer" class="nav__link">Layanan</a></li>
+          <li><a href="#projects" class="nav__link">Proyek</a></li>
+          <li><a href="#why" class="nav__link">Keunggulan</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary navbar__cta">Hubungi Saya</a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero" id="hero">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="hero__greet">Halo Semua</p>
+        <h1 class="hero__title">Saya <span class="text-accent">AHMAD SOFYAN</span></h1>
+        <p class="hero__role">Full Stack Developer Enthusiast</p>
+        <span class="hero__rule"></span>
+        <p class="hero__desc">
+          Sangat memiliki ketertarikan dan antusiasme mendalam khusus pada bidang profesi dan teknologi pengembangan perangkat lunak menyeluruh—dari tampilan antarmuka (front-end) hingga basis data (back-end).
+        </p>
+
+        <div class="hero__social">
+          <span>Temukan Saya Di</span>
+          <div class="social-row">
+            <a href="https://instagram.com/ahmdsofyaann" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/ahmadsofyann" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/ahmadsofyannn" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual Foto dengan Animasi Blob Frame -->
+      <div class="hero__visual">
+        <div class="hero__frame"></div>
+        <img src="image/pp.png" alt="Ahmad Sofyan" class="hero__photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHAT DO I OFFER ================= -->
+  <section class="offer" id="offer">
+    <div class="container">
+      <h2 class="section-tag">Layanan Saya</h2>
+
+      <!-- Box Pembungkus Utama Carousel -->
+      <div class="offer__cards-container">
+        <!-- Card disuntikkan secara dinamis melalui script.js -->
+        <div class="offer__cards" id="offerCards"></div>
+
+        <!-- Navigasi Slider -->
+        <div class="carousel-nav">
+          <button type="button" class="carousel-arrow" id="offerPrev" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          
+          <div class="carousel-dots" id="offerDots"></div>
+
+          <button type="button" class="carousel-arrow" id="offerNext" aria-label="Next">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MY PROJECT ================= -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-tag">Proyek Saya</h2>
+
+      <div class="project-list">
+        <!-- Project Item 1 -->
+        <article class="project-card">
+          <div class="project-thumb project-thumb--empty"></div>
+          <h3 class="project-title">Judul Proyek</h3>
+          <a href="#" class="btn btn--outline btn--sm">Detail Proyek</a>
+        </article>
+
+        <!-- Project Item 2 -->
+        <article class="project-card">
+          <div class="project-thumb project-thumb--empty"></div>
+          <h3 class="project-title">Judul Proyek</h3>
+          <a href="#" class="btn btn--outline btn--sm">Detail Proyek</a>
+        </article>
+
+        <!-- Project Item 3 -->
+        <article class="project-card">
+          <div class="project-thumb project-thumb--empty"></div>
+          <h3 class="project-title">Judul Proyek</h3>
+          <a href="#" class="btn btn--outline btn--sm">Detail Proyek</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY HIRE ME ================= -->
+  <section class="why" id="why">
+    <div class="container">
+      <h2 class="section-tag">Keunggulan</h2>
+
+      <div class="why__grid">
+        <div class="why-card">
+          <div class="why-card__icon">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+          </div>
+          <h3>Komunikatif</h3>
+          <p>Siap berkomunikasi secara jelas dan menjaga kerja sama tim yang solid.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card__icon">
+            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+          </div>
+          <h3>Konsep Kreatif</h3>
+          <p>Menghadirkan ide visual yang segar, fungsional, dan modern pada setiap desain.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card__icon">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
+          </div>
+          <h3>Detail Oriented</h3>
+          <p>Fokus pada keseimbangan tata letak, tipografi, dan kepresisian.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-card__icon">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+          </div>
+          <h3>Respon Cepat</h3>
+          <p>Eksekusi yang efisien untuk mencapai tenggat waktu tanpa mengorbankan kualitas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TOOLS & SKILLS ================= -->
+  <section class="skills">
+    <div class="container">
+      <h2 class="section-tag">Keahlian & Tools</h2>
+
+      <div class="skills__row">
+        <!-- HTML5 -->
+        <div class="skill-badge" title="HTML5">
+          <i class="fa-brands fa-html5 color-html" aria-hidden="true"></i>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="skill-badge" title="CSS3">
+          <i class="fa-brands fa-css3-alt color-css" aria-hidden="true"></i>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-badge" title="JavaScript">
+          <i class="fa-brands fa-js color-js" aria-hidden="true"></i>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-badge" title="Python">
+          <i class="fa-brands fa-python color-python" aria-hidden="true"></i>
+        </div>
+
+        <!-- C++ -->
+        <div class="skill-badge" title="C++">
+          <span class="color-cpp">C++</span>
+        </div>
+
+        <!-- PostgreSQL -->
+        <div class="skill-badge" title="PostgreSQL">
+          <i class="fa-solid fa-database color-database" aria-hidden="true"></i>
+        </div>
+
+        <!-- VS Code -->
+        <div class="skill-badge" title="VS Code">
+          <i class="fa-solid fa-code color-vscode" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER / CONTACT ================= -->
+  <footer class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <h2>Punya Ide Proyek? <br><span class="text-accent">Mari Bekerja Sama!</span></h2>
+          <p class="contact__desc"></p>
+
+          <address>
+            <ul class="contact__list">
+              <li>
+                <div class="contact__icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></div>
+                <div>
+                  <small>Email</small>
+                  <p><a href="mailto:ahmadsofyan@gmail.com">-</a></p>
+                </div>
+              </li>
+              <li>
+                <div class="contact__icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                <div>
+                  <small>Telepon / WhatsApp</small>
+                  <p><a href="tel:+628123456789">-</a></p>
+                </div>
+              </li>
+              <li>
+                <div class="contact__icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                <div>
+                  <small>Lokasi</small>
+                  <p>Indonesia</p>
+                </div>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="contact__art">
+          <div class="contact__image-wrap">
+            <img src="image/footer.jpg" alt="Ahmad Sofyan" class="contact__img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Utama -->
+  <script src="script.js"></script>
+
+</body>
+</html>

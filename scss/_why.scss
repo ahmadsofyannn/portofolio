@@ -1,0 +1,66 @@
+/* =========================================================
+   7. WHY HIRE ME SECTION
+   ========================================================= */
+.why {
+  padding-block: 70px;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Icon Outer Circle (Glow Effect) */
+.why-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-color);
+  background: var(--accent-soft);
+  color: var(--accent-color);
+  font-size: 2.1rem;
+  margin-bottom: 22px;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover .why-card__icon {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 25px var(--accent-glow);
+  background: rgba(0, 240, 255, 0.15);
+}
+
+.why-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+}
+
+.why-card:hover h3 {
+  color: var(--accent-color);
+}
+
+.why-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
