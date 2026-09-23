@@ -698,6 +698,7 @@ input:focus-visible {
   border-radius: 14px;
   overflow: hidden;
   flex-shrink: 0;
+  object-fit: cover;
   position: relative;
 }
 
@@ -1200,3 +1201,22 @@ input:focus-visible {
   font-size: 0.85rem;
   padding-bottom: 24px;
 }/*# sourceMappingURL=main.css.map */
+
+/* ================= RESPONSIVE HP (MOBILE) ================= */
+@media screen and (max-width: 768px) {
+  .hero__grid {
+    grid-template-columns: 1fr; /* Tampilan 1 kolom bertumpuk di HP */
+    gap: 2.5rem;
+  }
+
+  .hero__visual {
+    width: 100%;
+    max-width: 280px;  /* Lebar ideal bingkai di HP */
+    height: 360px;     /* Tinggi ideal bingkai di HP agar tidak gepeng/tertarik */
+    margin: 0 auto;    /* Posisikan persis di tengah layar HP */
+  }
+
+  .hero__photo {
+    max-height: 330px; /* Ukuran foto menyesuaikan bingkai HP */
+  }
+}
